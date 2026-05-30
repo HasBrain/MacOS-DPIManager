@@ -1,0 +1,9 @@
+.DS_Store
+*.xcuserdatad/
+xcuserdata/
+DerivedData/
+build/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+DPIManager/Products/
