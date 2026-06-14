@@ -29,7 +29,7 @@ brew install --cask 0xdranzer/tap/dpimanager
 > If macOS blocks the app on first launch, run:
 > ```bash
 > xattr -dr com.apple.quarantine /Applications/DPIManager.app
-> `
+> 
 
 ### 🖐 Manual
 
