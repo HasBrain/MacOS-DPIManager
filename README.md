@@ -11,8 +11,8 @@ A macOS utility to enable HiDPI (Retina scaling) on external monitors, built wit
 ### Homebrew (Recommended)
 
 ```bash
-brew tap 0xDranzer/tap
-brew install --cask 0xdranzer/tap/dpimanager
+brew tap shad0w-cl0nE/tap
+brew install --cask shad0w-cl0nE/tap/dpimanager
 ```
 
 If macOS blocks the app on first launch:
