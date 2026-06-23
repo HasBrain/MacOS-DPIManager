@@ -1,49 +1,51 @@
-# MAC_DPIManager
+# macOS DPIManager
 
-A native macOS utility to enable or disable HiDPI (Retina scaling) display modes on external monitors.  
-Built with **SwiftUI** and **IOKit**, this app makes it easy to manage display resolutions, and apply font smoothing preferences — all through a modern, clean GUI.
+A macOS utility to enable HiDPI (Retina scaling) on external monitors, built with SwiftUI and IOKit.
 
+> On recent macOS versions, HiDPI modes at native resolution may not persist after reboot. Apple limits custom overrides on managed displays like the Pro Display XDR to approved presets only.
 
-> Note: On recent macOS updates, HiDPI modes matching a display’s native resolution (especially on Apple displays like the Pro Display XDR) may not appear after reboot. macOS typically offers HiDPI scaling only for resolutions below native and may reject custom overrides on managed displays like the Pro Display XDR, limiting options to Apple-approved presets
+---
 
-## 📸 Features
+## Installation
 
-- 🖥️ Detect connected displays with VendorID & ProductID.
-- 📏 Enable **HiDPI (Retina scaling)** modes for selected displays.
-- 📝 Support for **predefined** and **custom resolutions**.
-- 🎨 Optional selection of display icons.
-- 🔠 Adjust **Font Smoothing** settings (-1, 0, 1, 2, 3) on the fly.
-- 💻 Supports both **Apple Silicon (arm64)** and **Intel Macs**.
-- 🔐 Runs required privileged commands safely via `osascript` authentication prompts.
-- 📦 Clean, native **SwiftUI** interface.
-
-## 📥 Installation
-
-### 🍺 Via Homebrew (Recommended)
+### Homebrew (Recommended)
 
 ```bash
 brew tap 0xDranzer/tap
 brew install --cask 0xdranzer/tap/dpimanager
 ```
 
-> If macOS blocks the app on first launch, run:
-> ```bash
-> xattr -dr com.apple.quarantine /Applications/DPIManager.app
-> 
+If macOS blocks the app on first launch:
 
-### 🖐 Manual
+```bash
+xattr -dr com.apple.quarantine /Applications/DPIManager.app
+```
+
+### Manual
 
 1. Download the latest [release](https://github.com/Harsh6628/MAC_DPIManager/releases/download/v1.0.0/DPIManager.zip).
-2. Extract & Move the `.app` bundle to your `/Applications` folder.
-3. Launch the app — you may need to grant permissions to run it the first time.
-> ⚠️ **Important**
->
-> This step is necessary because the app has not been notarized by Apple due to the membership fees of the Apple Developer Program.  
-> If you see a message like  **“Apple could not verify ‘DPIManager.app’ is free of malware”**, it refers to the **lack of notarization**, not to any detected issues or anomalies.
+2. Move the `.app` to `/Applications`.
+3. Launch it - on first open, macOS may show a security warning.
 
-4. For enabling/disabling HiDPI, you’ll be prompted for your administrator password.
+**Why the warning?** The app isn't notarized because Apple charges $99/year for a Developer Program membership. The warning means "unsigned," not "malicious." The full source is open here.
 
-## Usage
+For HiDPI changes, you'll be prompted for your admin password.
+
+---
+
+## Features
+
+- Detects connected displays using VendorID & ProductID
+- Enables and disables HiDPI (Retina scaling) modes
+- Supports predefined and custom resolutions
+- Adjusts font smoothing settings (-1 through 3)
+- Works on Apple Silicon and Intel Macs
+- Native SwiftUI interface
+
+---
+
+## Screenshots
+
 <table>
   <tr>
     <td><img width="516" height="749" alt="DPIManager" src="https://github.com/user-attachments/assets/4e378d6b-63a1-45dc-ac21-1d89e0ffe4d0"></td>
@@ -51,24 +53,32 @@ brew install --cask 0xdranzer/tap/dpimanager
   </tr>
 </table>
 
+[Watch the tutorial →](https://youtu.be/kmteq305lV8)
 
-## Tutorial Video
+---
 
-Please watch this video: https://youtu.be/kmteq305lV8
+## Heads up
 
-## ⚠️ Warnings
+- Enabling HiDPI writes override files to `/Library/Displays/Contents/Resources/Overrides`
+- Disabling HiDPI removes them
+- A reboot is required for changes to take effect
 
-- **Enabling HiDPI creates override files in `/Library/Displays/Contents/Resources/Overrides`.**
-- **Disabling HiDPI removes those override files.**
-- A **system reboot is required** for changes to take effect.
+---
 
-Pull requests are welcome!  
-For major changes, please open an issue first to discuss what you would like to change.
+## Contributing
 
-## ⭐️ If you like this project — consider giving it a star!
+Pull requests are welcome. For major changes, open an issue first to discuss what you'd like to change.
 
-I’m building this tool to make macOS display management simpler and more accessible for everyone. Your support helps me continue maintaining and improving it.
+---
 
-I’m also currently working toward covering my education expenses, so every contribution genuinely makes a difference.
+## Support
+
+DPIManager is free and open source. If it's saved you some time, consider supporting - I'm a student maintaining this in my spare time.
+
+Right now I'm trying to raise **$99 for an Apple Developer Program membership**. That's what it costs to get the app properly signed and notarized - which would eliminate the security warning on install entirely. No more scary popups, no more running `xattr` in the terminal just to open the app.
+
+If you've hit that warning yourself, that's exactly what your support would fix for everyone after you.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F2F31YNLZ1)
+
+A ⭐ star also helps - it makes the project easier to find for other macOS users who need this.
