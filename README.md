@@ -48,12 +48,11 @@ For HiDPI changes, you'll be prompted for your admin password.
 
 <table>
   <tr>
-    <td><img width="516" height="749" alt="DPIManager" src="https://github.com/user-attachments/assets/4e378d6b-63a1-45dc-ac21-1d89e0ffe4d0"></td>
-    <td><img width="516" height="749" alt="DPIManager-2" src="https://github.com/user-attachments/assets/647fe268-40c2-40a7-91f9-5130a9b865ca"></td>
+    <td><img width="1000" height="749" alt="DPIManager" src="https://github.com/user-attachments/assets/d31a9ada-1f70-4a0b-b26a-d34b1ce3613e"></td>
   </tr>
 </table>
 
-[Watch the tutorial →](https://youtu.be/kmteq305lV8)
+[Watch the tutorial →](https://youtu.be/Bp8UNsP7VDU)
 
 ---
 
