@@ -2,7 +2,7 @@
 
 A macOS utility to enable HiDPI (Retina scaling) on external monitors, built with SwiftUI and IOKit.
 
-> On recent macOS versions, HiDPI modes at native resolution may not persist after reboot. Apple limits custom overrides on managed displays like the Pro Display XDR to approved presets only.
+> On recent macOS versions, HiDPI modes at native resolution may not persist after reboot. Apple limits custom overrides on managed displays like the Pro Display XDR to approved presets only - still, give it a try!
 
 ---
 
